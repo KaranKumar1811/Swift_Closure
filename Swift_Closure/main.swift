@@ -70,12 +70,32 @@ print(desc)
 desc=myArray.sorted(by: >)
 print(desc)
 
+// Escaping
 
+func call(completion: @escaping (_:Bool) -> Void )
+{
+    sleep(3)
+    completion(false)
+}
+print("Start")
+call {
+    (flag) in
+    print(flag)
+}
+print("End")
 
+func moreSUM ( sumFunc: @escaping( _:Int)-> Void)
+{
+    for x in 1...10
+    {
+    sumFunc(x)
+        sleep(2)
+    }
+}
 
-
-
-
+moreSUM {(y) in
+    print(y)
+}
 
 
 
