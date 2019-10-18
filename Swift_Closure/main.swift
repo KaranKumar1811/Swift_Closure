@@ -43,7 +43,7 @@ let sum = myArray.map { (x) -> Int in
 print(sum)
 
 
-let desc = myArray.sorted(by: { (n1, n2) -> Bool in
+var desc = myArray.sorted(by: { (n1, n2) -> Bool in
     return n1 > n2
 })
 
@@ -51,7 +51,32 @@ print(desc)
 
 var stringArray:[String]=["kaj","dsfsf","adsad","23fsdf","sdfsg"]
 
-let StringDesc = stringArray.sorted(by: { (a1, a2) -> Bool in
+var StringDesc = stringArray.sorted(by: { (a1, a2) -> Bool in
     return a1 > a2
 })
 print(StringDesc)
+
+
+
+var add = {
+    (n1: Int,n2: Int)-> Bool in
+    return n1 > n2
+}
+
+desc=myArray.sorted(by: add)
+print(desc)
+
+
+desc=myArray.sorted(by: >)
+print(desc)
+
+
+
+
+
+
+
+
+
+
+
